@@ -1,80 +1,382 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to My Personal Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/onkabetse-monamodi-a450542b3/" target="_blank">
-                    <img src="images\icons8-linkedin-500.png" alt="LinkedIn">
-                </a>
-                <a href="https://github.com/Duncan413" target="_blank">
-                    <img src="images\icons8-github-500.png" alt="GitHub">
-                </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Onkabetse Monamodi</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Onkabetse Monamodi</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/IMG-20230122-WA0002~2-modified.png" alt="Onkabetse Monamodi Profille Picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Onkabetse Monamodi</h1>
+        <p class="section__text__p2">Frontend Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Onkabetse Monamodi Curriculum Vitae.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/onkabetse-monamodi-a450542b3/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/Duncan413'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/IMG-20230120-WA0014~2.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>2+ years <br />Frontend Development</p>
             </div>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello there, I'm Onkabetse. I am currently a student at the North-West University, studying a Bachelor of Science in Computer Science and Mathematics. 
-                I have interests in everything, ranging from music to artificial intelligence. I am very much a multifaceted individual and strive to do my best as well as enjoy everything I do.
-            This website is where I document some of the most important things in my life and it represents the beginning of me working towards being an exceptional software developer.</p>
-        </section>
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some of my projects:</p>
-            <ul>
-                <li>Personal Website</li>
-                <p>When I started the second year of my degree, I noticed that I had not started developing any personal projects because I thought I would learn everything in my university courses/modules. 
-                   This essentially forced me to self-introspect and ask myself where my interests lie in the computer science field. I knew I was very much interested in software development and cybersecurity,
-                   but it seemed too soon to start a full-fledged project on both. After some time, the thought of developing a website appealed to me, as I always wondered how websites and apps are developed.
-                   Learning HTML, CSS, and JavaScript all on my own with no prior experience in any of them taught me important skills that I am eager to apply in any workplace and even in my personal life.</p>
-            </ul>
-        </section>
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <p>Throughout my high school journey, I had constantly been honored with top of the class accolades and had always outshone my peers in every subject I took, but it is my matric year which stood out because not only did I outshine my classmates, but I also towered above all matriculants from my sub-district. Achieving a full house of distinctions as well as an average of 90% in the NSC Examinations placed me at the top spot in the sub-district, top 10 in the district and one of the top performers in the North-West Province. I have always worked both smart and hard, but the magnitude of my achievements showed me that there is really no limit to my potential. In university, I continue to obtain considerably good results and strive to not only better myself, but help other students along the way, which equips me with good leadership and teamwork skills.</p>
-            <div class="achievement-images">
-                <img id="achievement1" src="images\1679744079773.jpg" alt="Achievement Image 1">
-                <img src="images\IMG-20230120-WA0014~2.jpg" alt="Achievement Image 2">
-                <img  id="achievement3" src="images\IMG-20230122-WA0001~2.jpg" alt="Achievement Image 3">
-
-                <div class="hidden-images" style="display: none;">
-                    <img src="images/IMG-20230122-WA0002~2.jpg" alt="Achievement Image 4">
-                    <img src="images/IMG-20230122-WA0003.jpg" alt="Achievement Image 5">
-                    <img src="images/IMG-20230125-WA0001.jpg" alt="Achievement Image 6">
-                    <img src="images/IMG-20230205-WA0000.jpg" alt="Achievement Image 7">
-                    <img src="images/IMG-20230205-WA0001~2.jpg" alt="Achievement Image 8">
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Sc. Computer Science & Mathematics</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              I am a passionate technology enthusiast with a deep commitment to software development and engineering. 
+              My work is driven by a desire to create impactful solutions that align with my belief in sustainability and responsible innovation. 
+              I aim to contribute to organizations that prioritize not just cutting-edge technology, 
+              but also the development of sustainable and ethical product, whether software or otherwise. 
+              With a keen eye for detail, a focus on continuous improvement, and a dedication to mastering the evolving landscape of technology, 
+              I am determined to blend my technical expertise with a purpose-driven approach to make a meaningful difference.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
                 </div>
-
-                <button id="see-more-btn" onclick="toggleHiddenImages()">See more...</button>
-
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
-            <p>Check out my interview with a NewzRoom Afrika reporter(Time Stamp: 8:27): <a href="https://www.youtube.com/watch?v=fAed5o9F734" target="_blank">Watch on YouTube</a></p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can reach me at <a href="mailto:onkabetsemonamodi413@gmail.com">onkabetsemonamodi413@gmail.com</a>.</p>
-        </section>
-    </main>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Java</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="onkabetsemonamodi413@gmail.com">onkabetsemonamodi413@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/onkabetse-monamodi-a450542b3/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
     <footer>
-        <p>&copy; 2024 Onkabetse. All rights reserved.</p>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 Onkabetse Monamodi. All Rights Reserved.</p>
     </footer>
-
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
